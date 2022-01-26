@@ -29,46 +29,14 @@ public class Starter implements CommandLineRunner {
     private Cinema centralmultiplex1;
     private Cinema citycinema1;
 
-//    @Autowired
-//    public Starter(@Qualifier("qfx") Cinema qfx1,@Qualifier("iqcinema") Cinema iqcinema1,@Qualifier("centralmultiplex") Cinema centralmultiplex1,@Qualifier("citycinema") Cinema citycinema1) {
-//        this.qfx1 = qfx1;
-//        this.iqcinema1 = iqcinema1;
-//        this.centralmultiplex1 = centralmultiplex1;
-//        this.citycinema1 = citycinema1;
-//    }
-
-
-    public Cinema getQfx1() {
-        return qfx1;
-    }
-
-    public void setQfx1(Cinema qfx1) {
+    @Autowired
+    public Starter(@Qualifier("qfx") Cinema qfx1,@Qualifier("iqcinema") Cinema iqcinema1,@Qualifier("centralmultiplex") Cinema centralmultiplex1,@Qualifier("citycinema") Cinema citycinema1) {
         this.qfx1 = qfx1;
-    }
-
-    public Cinema getIqcinema1() {
-        return iqcinema1;
-    }
-
-    public void setIqcinema1(Cinema iqcinema1) {
         this.iqcinema1 = iqcinema1;
-    }
-
-    public Cinema getCentralmultiplex1() {
-        return centralmultiplex1;
-    }
-
-    public void setCentralmultiplex1(Cinema centralmultiplex1) {
         this.centralmultiplex1 = centralmultiplex1;
-    }
-
-    public Cinema getCitycinema1() {
-        return citycinema1;
-    }
-
-    public void setCitycinema1(Cinema citycinema1) {
         this.citycinema1 = citycinema1;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
